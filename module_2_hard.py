@@ -1,6 +1,6 @@
 import random
 
-number_one = random.randint(8, 8)
+number_one = random.randint(3, 20)
 print(f'Число из первой вставки {number_one}')
 multiplier = []
 list_result = []
