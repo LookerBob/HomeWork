@@ -25,7 +25,6 @@ started_at = datetime.now()
 threads = [threading.Thread(target=write_words, args=args) for args in thr]
 for t in threads:
     t.start()
-
 for t in threads:
     t.join()
 ended_at = datetime.now()
