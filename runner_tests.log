@@ -1,0 +1,24 @@
+WARNING | Неверный тип данных для объекта Runner. ('Имя может быть только строкой, передано int',)
+Traceback (most recent call last):
+  File "C:\Users\Root\PycharmProjects\HomeWorkProject\tests_12_4.py", line 34, in test_challenge
+    x = runner.Runner(7, 15)
+        ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Root\PycharmProjects\HomeWorkProject\rt_with_exceptions.py", line 6, in __init__
+    raise TypeError(f'Имя может быть только строкой, передано {type(name).__name__}')
+TypeError: Имя может быть только строкой, передано int
+WARNING | Неверный тип данных для объекта Runner. ('Имя может быть только строкой, передано int',)
+Traceback (most recent call last):
+  File "C:\Users\Root\PycharmProjects\HomeWorkProject\tests_12_4.py", line 23, in test_run
+    x = runner.Runner(12345, 300)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Root\PycharmProjects\HomeWorkProject\rt_with_exceptions.py", line 6, in __init__
+    raise TypeError(f'Имя может быть только строкой, передано {type(name).__name__}')
+TypeError: Имя может быть только строкой, передано int
+WARNING | Неверная скорость для Runner. ('Скорость не может быть отрицательной, сейчас -5',)
+Traceback (most recent call last):
+  File "C:\Users\Root\PycharmProjects\HomeWorkProject\tests_12_4.py", line 11, in test_walk
+    x = runner.Runner("Max", -5)
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Root\PycharmProjects\HomeWorkProject\rt_with_exceptions.py", line 11, in __init__
+    raise ValueError(f'Скорость не может быть отрицательной, сейчас {speed}')
+ValueError: Скорость не может быть отрицательной, сейчас -5
