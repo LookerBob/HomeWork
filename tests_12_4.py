@@ -43,8 +43,8 @@ class RunnerTest(unittest.TestCase):
         except ValueError as err:
             logging.warning(f'Неверная скорость для Runner. {err.args}', exc_info=True)
 
+logging.basicConfig(level=logging.INFO, filemode="w", filename="runner_tests.log", encoding="UTF-8",
+                    format="%(levelname)s | %(message)s", force=True)
 
 if __name__ == "__main__":
     unittest.main()
-    logging.basicConfig(level=logging.INFO, filemode="w", filename=" runner_tests.log", encoding="UTF-8",
-                        format="%(levelname)s | %(message)s")
