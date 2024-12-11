@@ -5,7 +5,7 @@ from aiogram.dispatcher.filters.state import State, StatesGroup
 from aiogram.dispatcher import FSMContext
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
 
-api = "5366608172:AAEtHCAP2ggt1kGjwIk9YMZKfMcMYEzcT1w"
+api = ""
 bot = Bot(token=api)
 dp = Dispatcher(bot, storage=MemoryStorage())
 kb = ReplyKeyboardMarkup()
