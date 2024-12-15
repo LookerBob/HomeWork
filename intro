@@ -1,0 +1,40 @@
+import inspect
+from pprint import pprint
+
+
+class TestClass:
+    test_attrib_1 = 0
+    test_attrib_2 = 'q'
+
+    def test_method(self):
+        pass
+
+def introspection_info(obj=None):
+    info = {'Type': type(obj).__name__,
+            'Attributes': [attribute for attribute in dir(obj) if not callable(getattr(obj, attribute))],
+            'Methods': [method for method in dir(obj) if callable(getattr(obj, method))]}
+    module = inspect.getmodule(obj)
+    if module:
+        info['Module'] = module.__name__
+    if isinstance(obj, (int, float)):
+        info['Value'] = obj
+    return info
+
+
+if __name__ == "__main__":
+    number_info = introspection_info(42)
+    pprint(number_info)
+
+    function_info = introspection_info(introspection_info)
+    pprint(function_info)
+
+    class_info = introspection_info(TestClass)
+    pprint(class_info)
+
+    test_class_obj = TestClass()
+    info = introspection_info(test_class_obj)
+    pprint(info)
+
+    empty_info = introspection_info()
+    pprint(empty_info)
+    
